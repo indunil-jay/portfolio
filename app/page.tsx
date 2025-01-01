@@ -1,3 +1,16 @@
+import { EducationSection } from "@/components/sections/education-section";
+import { LandingSection } from "@/components/sections/landing-section";
+import { TechnologySection } from "@/components/sections/technology-section";
+
 export default function Home() {
-    return <div className="h-[3000px]"></div>;
+    return (
+        <div className="space-y-20">
+            {/* landing section */}
+            <LandingSection />
+            {/* section-education*/}
+            <EducationSection />
+            {/* technology */}
+            <TechnologySection />
+        </div>
+    );
 }
