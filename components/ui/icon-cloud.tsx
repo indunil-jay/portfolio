@@ -1,3 +1,4 @@
+//@typescript-eslint/no-unused-vars
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
@@ -67,7 +68,7 @@ export const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
 type IconData = Awaited<ReturnType<typeof fetchSimpleIcons>>;
 
 export default function IconCloud({
-    iconSlugs = [], // Default to an empty array if not provided
+    iconSlugs = [],
     imageArray,
 }: DynamicCloudProps) {
     const [data, setData] = useState<IconData | null>(null);
