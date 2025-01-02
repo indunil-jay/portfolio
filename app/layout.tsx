@@ -28,7 +28,7 @@ export default function RootLayout({
                 >
                     {children}
                     <div className="fixed !z-[9999] -translate-x-1/2 left-1/2 bottom-4">
-                        <ToolBarContent />
+                        {/* <ToolBarContent /> */}
                     </div>
                 </ThemeProvider>
             </body>

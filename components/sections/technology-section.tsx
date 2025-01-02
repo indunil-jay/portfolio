@@ -20,7 +20,7 @@ const slugs = [
     "mongodb",
     "postgresql",
     "mysql",
-    "shadcn/ui",
+    // "shadcn/ui",
     "vercel",
     "testinglibrary",
     "jest",
@@ -28,7 +28,7 @@ const slugs = [
     "docker",
     "git",
     "github",
-    "visualstudiocode",
+    // "visualstudiocode",
 ];
 
 const technology = {

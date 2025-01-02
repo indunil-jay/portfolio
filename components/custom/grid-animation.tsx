@@ -18,12 +18,21 @@ export const GridAnimation = () => {
     ];
 
     const [currentIndices, setCurrentIndices] = useState<number[]>([]); // Tracks the filling cells
+    const [directions, setDirections] = useState<string[]>([]); // Store pre-calculated random directions
 
     // Get random direction for each cell
     const getRandomDirection = () => {
         const directions = ["top", "bottom", "left", "right"];
         return directions[Math.floor(Math.random() * directions.length)];
     };
+
+    // Memoize the directions
+    useEffect(() => {
+        const initialDirections = Array.from({ length: gridSize }, () =>
+            getRandomDirection()
+        );
+        setDirections(initialDirections); // Set directions once when component mounts
+    }, []);
 
     // Start animation process
     useEffect(() => {
@@ -63,7 +72,7 @@ export const GridAnimation = () => {
             <div className="min-h-screen grid grid-cols-16 grid-rows-9 w-full">
                 {Array.from({ length: gridSize }, (_, i) => {
                     const isTarget = currentIndices.includes(i); // Check if the cell should animate
-                    const direction = getRandomDirection(); // Random direction for animation
+                    const direction = directions[i]; // Use pre-calculated direction
 
                     // Check if the cell should have no border (remove border for the specific cells)
                     const hasBorder =
