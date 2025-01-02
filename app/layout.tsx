@@ -18,7 +18,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${inter.className} relative antialiased max-w-screen-lg mx-auto min-h-svh p-4 `}
+                className={`${inter.className} relative antialiased max-w-screen-lg 2xl:max-w-screen-2xl mx-auto min-h-svh p-4 `}
             >
                 <ThemeProvider
                     attribute="class"
@@ -28,7 +28,7 @@ export default function RootLayout({
                 >
                     {children}
                     <div className="fixed !z-[9999] -translate-x-1/2 left-1/2 bottom-4">
-                        {/* <ToolBarContent /> */}
+                        <ToolBarContent />
                     </div>
                 </ThemeProvider>
             </body>

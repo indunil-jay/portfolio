@@ -1,8 +1,13 @@
+"use client";
 import DotPattern from "@/components/ui/dot-pattern";
 import { cn } from "@/lib/utils";
+import { GridAnimation } from "../custom/grid-animation";
 export const LandingSection = () => {
     return (
-        <div className="relative min-h-screen">
+        <div className="relative min-h-screen ">
+            <div className="hidden md:grid absolute inset-0">
+                <GridAnimation />
+            </div>
             <DotPattern
                 className={cn(
                     "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]"

@@ -75,8 +75,8 @@ export const TechnologySection = () => {
                         front-end technology
                     </h3>
                     <div className="flex gap-2 flex-wrap">
-                        {technology.frontTechnoloy.map((item) => (
-                            <Badge key={item}>{item}</Badge>
+                        {technology.frontTechnoloy.map((item, i) => (
+                            <Badge key={i}>{item}</Badge>
                         ))}
                     </div>
                     <h3 className="text-xl font-semibold">
