@@ -32,7 +32,7 @@ export const GridAnimation = () => {
             getRandomDirection()
         );
         setDirections(initialDirections); // Set directions once when component mounts
-    }, []);
+    }, [gridSize]);
 
     // Start animation process
     useEffect(() => {
