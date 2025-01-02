@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ToolBarContent } from "@/components/custom/tool-bar-content";
@@ -20,6 +21,7 @@ export default function RootLayout({
             <body
                 className={`${inter.className} relative antialiased max-w-screen-lg 2xl:max-w-screen-2xl mx-auto min-h-svh p-4 `}
             >
+                <SpeedInsights />
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="system"
@@ -28,7 +30,7 @@ export default function RootLayout({
                 >
                     {children}
                     <div className="fixed !z-[9999] -translate-x-1/2 left-1/2 bottom-4">
-                        {/* <ToolBarContent /> */}
+                        <ToolBarContent />
                     </div>
                 </ThemeProvider>
             </body>
